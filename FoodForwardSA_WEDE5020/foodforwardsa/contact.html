@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact FoodForward SA's national office in Cape Town or the Gauteng regional depot. Send a message directly.">
+  <title>Contact | FoodForward SA</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        FoodForward SA
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="programmes.html">Our Work</a></li>
+        <li><a href="enquiry.html">Get Involved</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a class="btn btn-primary" href="enquiry.html">Donate</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section class="page-hero">
+      <div class="wrap">
+        <span class="eyebrow">Contact</span>
+        <h1>Two ways to reach the network</h1>
+        <p class="lede">The national office coordinates the whole organisation; regional depots handle collections and volunteering closer to home.</p>
+      </div>
+    </section>
+
+    <!-- ============================= LOCATIONS ============================= -->
+    <!-- Two real locations shown, satisfying the "more than one location"
+         requirement in the brief. National office address is FFSA's actual
+         published head office; the Gauteng depot is described generally
+         since a precise street address wasn't published in the sources used. -->
+    <section class="section">
+      <div class="wrap grid-2">
+        <div class="card loc-card reveal">
+          <span class="loc-tag">National office</span>
+          <h3>Cape Town &mdash; Western Cape</h3>
+          <address>
+            Cape Town Market, 110 Gunners Circle<br>
+            Epping 1, Cape Town, 7460<br>
+            South Africa
+          </address>
+          <p style="margin-top:10px;"><a href="tel:+27215315670">021 531 5670</a></p>
+          <iframe
+            class="map-frame"
+            title="Map showing FoodForward SA national office in Epping, Cape Town"
+            src="https://www.google.com/maps?q=110+Gunners+Circle+Epping+Cape+Town&output=embed"
+            loading="lazy">
+          </iframe>
+        </div>
+
+        <div class="card loc-card reveal">
+          <span class="loc-tag">Regional depot</span>
+          <h3>Gauteng</h3>
+          <address>
+            FoodForward SA Gauteng Depot<br>
+            Johannesburg, Gauteng<br>
+            South Africa
+          </address>
+          <p style="margin-top:10px; color: var(--ink-soft); font-size:0.85rem;">Serves beneficiary organisations and volunteers across Gauteng. Contact the national office to be routed to this depot.</p>
+          <iframe
+            class="map-frame"
+            title="Map showing Johannesburg, Gauteng"
+            src="https://www.google.com/maps?q=Johannesburg+Gauteng&output=embed"
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= OTHER PROVINCES ============================= -->
+    <section class="section section-alt">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">National footprint</span>
+          <h2>Warehouses across all nine provinces</h2>
+          <p>Beyond Cape Town and Gauteng, FoodForward SA also operates in KwaZulu-Natal, the Free State, Eastern Cape, Mpumalanga, Limpopo, North West and the Northern Cape. Use the enquiry form to be connected to the depot nearest you.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= CONTACT FORM ============================= -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Send a message</span>
+          <h2>General enquiries</h2>
+          <p>For donations or volunteering specifically, the <a href="enquiry.html">Get Involved</a> page routes you faster. Use this form for anything else &mdash; media, partnerships, or general questions.</p>
+        </div>
+        <div class="form-card reveal">
+          <div class="form-success" id="contactSuccess" role="status">
+            Thanks for reaching out. This is a static student prototype, so no message is actually sent.
+          </div>
+          <form id="contactForm" novalidate>
+            <div class="field">
+              <label for="cFullName">Full name</label>
+              <input type="text" id="cFullName" name="fullName" required minlength="2" autocomplete="name">
+              <p class="field-error">Please enter your name.</p>
+            </div>
+            <div class="field">
+              <label for="cEmail">Email address</label>
+              <input type="email" id="cEmail" name="email" required autocomplete="email">
+              <p class="field-error">Please enter a valid email address.</p>
+            </div>
+            <div class="field">
+              <label for="cSubject">Subject</label>
+              <input type="text" id="cSubject" name="subject" required minlength="3">
+              <p class="field-error">Please add a subject.</p>
+            </div>
+            <div class="field">
+              <label for="cMessage">Message</label>
+              <textarea id="cMessage" name="message" required minlength="10"></textarea>
+              <p class="field-error">Please add a short message (at least 10 characters).</p>
+            </div>
+            <button type="submit" class="btn btn-primary">Send message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <h4>FoodForward SA</h4>
+        <p style="color: rgba(255,255,255,0.7); max-width: 34ch; font-size: 0.92rem;">Recovering quality surplus food and redistributing it to communities across South Africa since 2009.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <a href="about.html">About Us</a>
+        <a href="programmes.html">Our Work</a>
+        <a href="enquiry.html">Get Involved</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>National Office</h4>
+        <a href="contact.html">Cape Town Market, 110 Gunners Circle, Epping 1, 7460</a>
+        <a href="tel:+27215315670">021 531 5670</a>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>Student concept site for WEDE5020 &middot; not affiliated with FoodForward SA</span>
+      <span>Part 1 &middot; Group 1</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

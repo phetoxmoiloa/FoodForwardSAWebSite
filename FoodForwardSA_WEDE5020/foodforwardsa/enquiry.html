@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Donate food, donate funds, or volunteer with FoodForward SA. Send an enquiry and the team will follow up.">
+  <title>Get Involved | FoodForward SA</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        FoodForward SA
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="programmes.html">Our Work</a></li>
+        <li><a href="enquiry.html" aria-current="page">Get Involved</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a class="btn btn-primary" href="enquiry.html">Donate</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section class="page-hero">
+      <div class="wrap">
+        <span class="eyebrow">Get involved</span>
+        <h1>Three ways in, one form</h1>
+        <p class="lede">Tell us whether you're donating food, giving funds, or volunteering, and the right team will follow up.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap grid-2">
+
+        <!-- ============================= ENQUIRY FORM ============================= -->
+        <!-- Single form with a "type" selector rather than three separate forms,
+             since an NPO enquiry (per the brief) should route donate/volunteer
+             enquiries without forcing the visitor to find three different pages. -->
+        <div class="reveal">
+          <div class="form-card">
+            <div class="form-success" id="formSuccess" role="status">
+              Thanks &mdash; your enquiry has been noted. This is a static student prototype, so no message is actually sent, but this is where a confirmation would appear.
+            </div>
+
+            <form id="enquiryForm" novalidate>
+              <div class="field">
+                <label for="enquiryType">I'd like to</label>
+                <select id="enquiryType" name="enquiryType" required>
+                  <option value="" disabled selected>Choose an option</option>
+                  <option value="donate-food">Donate surplus food (business)</option>
+                  <option value="donate-funds">Donate funds</option>
+                  <option value="volunteer">Volunteer at a warehouse</option>
+                  <option value="partner">Discuss a partnership</option>
+                </select>
+                <p class="field-error">Please choose an option.</p>
+              </div>
+
+              <div class="field">
+                <label for="fullName">Full name</label>
+                <input type="text" id="fullName" name="fullName" required minlength="2" autocomplete="name">
+                <p class="field-error">Please enter your name.</p>
+              </div>
+
+              <div class="field">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+                <p class="field-error">Please enter a valid email address.</p>
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone number <span style="font-weight:400;">(optional)</span></label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel">
+              </div>
+
+              <div class="field">
+                <label for="location">Nearest province</label>
+                <select id="location" name="location" required>
+                  <option value="" disabled selected>Select a province</option>
+                  <option>Western Cape</option>
+                  <option>Gauteng</option>
+                  <option>KwaZulu-Natal</option>
+                  <option>Eastern Cape</option>
+                  <option>Free State</option>
+                  <option>Mpumalanga</option>
+                  <option>Limpopo</option>
+                  <option>North West</option>
+                  <option>Northern Cape</option>
+                </select>
+                <p class="field-error">Please select a province.</p>
+              </div>
+
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required minlength="10" placeholder="Tell us a bit about what you'd like to do &mdash; e.g. the volume of food, or the days you're available."></textarea>
+                <p class="field-error">Please add a short message (at least 10 characters).</p>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Send enquiry</button>
+              <p class="form-note">Fields are validated in the browser for this prototype. A live version would post this data securely to FoodForward SA's enquiry system.</p>
+            </form>
+          </div>
+        </div>
+
+        <!-- ============================= SIDE INFO ============================= -->
+        <div class="reveal">
+          <span class="eyebrow">What happens next</span>
+          <h2>Where each path leads</h2>
+
+          <div class="card" style="margin-bottom:18px;">
+            <h3>Donating food</h3>
+            <p>A member of the foodbanking team will confirm collection details, food-safety requirements, and the nearest warehouse to your business.</p>
+          </div>
+          <div class="card" style="margin-bottom:18px;">
+            <h3>Donating funds</h3>
+            <p>You'll receive banking details and, for regular donors, information on Section 18A tax certificates issued at year end.</p>
+          </div>
+          <div class="card">
+            <h3>Volunteering</h3>
+            <p>Warehouse tasks include picking, packing, sorting and gardening. You'll be matched to a shift at the warehouse nearest your selected province.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <h4>FoodForward SA</h4>
+        <p style="color: rgba(255,255,255,0.7); max-width: 34ch; font-size: 0.92rem;">Recovering quality surplus food and redistributing it to communities across South Africa since 2009.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <a href="about.html">About Us</a>
+        <a href="programmes.html">Our Work</a>
+        <a href="enquiry.html">Get Involved</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>National Office</h4>
+        <a href="contact.html">Cape Town Market, 110 Gunners Circle, Epping 1, 7460</a>
+        <a href="tel:+27215315670">021 531 5670</a>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>Student concept site for WEDE5020 &middot; not affiliated with FoodForward SA</span>
+      <span>Part 1 &middot; Group 1</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
