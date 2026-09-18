@@ -1,66 +1,51 @@
 # FoodForward SA — Website Project (Part 2)
 
+## Table of Contents
+- [Project Title](#project-title)
+- [Student Information](#student-information)
+- [Project Overview](#project-overview)
+- [Website Goals and Objectives](#website-goals-and-objectives)
+- [Part 1 Details](#part-1-details)
+- [Timeline and Milestones (Part 1)](#timeline-and-milestones-part-1)
+- [Sitemap](#sitemap)
+- [File and Folder Structure](#file-and-folder-structure)
+- [Part 2 — CSS Styling and Responsive Design](#part-2--css-styling-and-responsive-design)
+  - [CSS and Responsive Changes](#css-and-responsive-changes)
+  - [Responsive Design & Testing Evidence](#responsive-design--testing-evidence)
+- [Key Features and Functionality](#key-features-and-functionality)
+- [Part 1 Lecturer Feedback & Changelog](#part-1-lecturer-feedback--changelog)
+- [References](#references)
+
+---
+
 ## Project Title
 FoodForward SA Website Redesign Concept
 
 ## Student Information
 - Subject: Web Development (WEDE5020)
-- Student Name:Phetogo
-- Student Number:ST10217316
+- Student Name: Phetogo
+- Student Number: ST10217316
 - Group: 1
 
 ## Project Overview
-This project is a concept website for **FoodForward SA**, a real South
-African NPO established in 2009 that recovers quality surplus food from
-farmers, manufacturers and retailers and redistributes it to a vetted
-network of beneficiary organisations across all nine provinces.
+This project is a concept website for FoodForward SA, a real South African NPO established in 2009 that recovers quality surplus food from farmers, manufacturers and retailers and redistributes it to a vetted network of beneficiary organisations across all nine provinces.
 
-The site is a **student prototype** built for the WEDE5020 Proof of
-Evidence. It is not affiliated with or endorsed by FoodForward SA — all
-organisational facts (history, figures, address) are sourced from public
-material and cited below, but the site itself, its design, and its copy
-are original student work.
+The site is a student prototype built for the WEDE5020 Proof of Evidence. It is not affiliated with or endorsed by FoodForward SA — all organisational facts (history, figures, address) are sourced from public material and cited below, but the site itself, its design, and its copy are original student work.
 
 ## Website Goals and Objectives
-- Make it immediately clear how a visitor can help (donate food, donate
-  funds, or volunteer).
+- Make it immediately clear how a visitor can help (donate food, donate funds, or volunteer).
 - Present FoodForward SA's real impact figures clearly and credibly.
-- Provide a simple, validated enquiry path that routes different visitor
-  types (donors, volunteers, partners) through one form.
+- Provide a simple, validated enquiry path that routes different visitor types (donors, volunteers, partners) through one form.
 - Give visitors a clear route to a physical location via the Contact page.
 
-## Part 2 — CSS Styling and Responsive Design
+## Part 1 Details
+This repository contains the foundational Part 1 deliverables:
+1. The approved Website Project Proposal (submitted separately as Word/PDF).
+2. Researched content and sourcing for FoodForward SA.
+3. Initial HTML page structure in a clean folder architecture pushed to GitHub.
+4. Comprehensive README documentation outlining project goals and planning.
 
-The Part 2 changes build on the Part 1 site without changing the basic site structure. The main styling is still kept in one external stylesheet (`css/styles.css`).
-
-### CSS and responsive changes
-- Added a consistent CSS reset/base layer, typography scale, spacing, colours, borders, buttons, cards and form styling.
-- Added CSS Grid/Flexbox layouts for the hero, route, cards, footer and form sections.
-- Added tablet and mobile breakpoints at 980px, 860px, 760px, 700px and 430px.
-- Added a mobile navigation button that expands/collapses the primary menu.
-- Added relative units (`rem`, `em`, `%`, `vw`) and `clamp()` for responsive typography and spacing.
-- Added responsive image handling using `<picture>`, `srcset` and `sizes` on the home page.
-- Added hover and keyboard focus states and retained the `prefers-reduced-motion` accessibility setting.
-- Kept the visual design deliberately simple so the CSS remains understandable for a student project.
-
-### Testing note
-The site should be tested in browser developer tools at desktop, tablet and mobile widths before submission. Screenshot evidence can be added to this README after local testing; screenshots should show the homepage at each required breakpoint and demonstrate the mobile navigation.
-
-## Key Features and Functionality
-- 5 pages: `index.html`, `about.html`, `programmes.html`, `enquiry.html`,
-  `contact.html`.
-- Responsive, mobile-first layout (see `css/styles.css`).
-- Client-side validated enquiry form and contact form (see `js/main.js`)
-  — required fields, inline error messages, focus management on error.
-- Scroll-reveal animation via `IntersectionObserver`, with
-  `prefers-reduced-motion` respected.
-- Two real locations shown on the Contact page (Cape Town national office
-  and a Gauteng regional depot), each with an embedded map.
-- Semantic HTML5 throughout (`header`, `nav`, `main`, `section`,
-  `article`, `address`, `footer`), with a skip-link and visible focus
-  states for keyboard users.
-- Original SVG mark used as the site favicon/brand icon — no stock
-  photography used, to avoid any licensing uncertainty in this prototype.
+Parts 2 and 3 build on top of this foundation within the same repository.
 
 ## Timeline and Milestones (Part 1)
 | Week | Milestone |
@@ -70,20 +55,7 @@ The site should be tested in browser developer tools at desktop, tablet and mobi
 | 3 | Build HTML structure and CSS design system; write and integrate real content |
 | 4 | Add JavaScript behaviour (validation, nav, reveal), test across browsers, write README, push to GitHub |
 
-## Part 1 Details
-This repository contains the Part 1 deliverables:
-1. The approved Website Project Proposal (submitted separately as
-   Word/PDF).
-2. Researched content and sourcing for FoodForward SA.
-3. This initial set of HTML files, in a clear folder structure, pushed to
-   GitHub.
-4. This README, documenting the project.
-
-Parts 2 and 3 (styling refinement, JavaScript interactivity, and further
-iteration) will be added to this same repository in later submissions.
-
 ## Sitemap
-```
 /
 ├── index.html          Home — hero, impact stats, "the route" overview, CTA
 ├── about.html           About — history timeline, mission/vision, leadership
@@ -95,32 +67,70 @@ iteration) will be added to this same repository in later submissions.
 ├── js/
 │   └── main.js            Scroll reveal + form validation, vanilla JS
 └── images/
-    └── favicon.svg         Original brand mark (no external assets)
-```
+└── favicon.svg         Original brand mark (no external assets)
 
 ## File and Folder Structure
-Root-level HTML files with `css/`, `js/`, and `images/` subfolders, per
-the brief's required structure. All internal links use relative paths, so
-the whole folder can be opened locally or hosted as-is.
+Root-level HTML files with css/, js/, and images/ subfolders, per the brief's required structure. All internal links use relative paths, so the whole folder can be opened locally or hosted as-is.
 
-## Changelog
-- **v0.1** — Initial commit: folder structure, empty HTML shells.
-- **v0.2** — Design system in `styles.css` (colour tokens, type scale,
-  the "route" waypoint component).
-- **v0.3** — Homepage (`index.html`) built and content integrated.
-- **v0.4** — About, Programmes, Enquiry, and Contact pages built.
-- **v0.5** — `main.js` added: scroll reveal, form validation, error
-  states, reduced-motion handling.
-- **v0.6** — Favicon added, cross-page nav/link audit, HTML structure
-  linted, README written.
+## Part 2 — CSS Styling and Responsive Design
+
+The Part 2 changes build on the Part 1 site without changing the basic site structure. The main styling is kept in one external stylesheet (css/styles.css).
+
+### CSS and Responsive Changes
+- Added a consistent CSS reset/base layer, typography scale, spacing, colours, borders, buttons, cards and form styling.
+- Added CSS Grid/Flexbox layouts for the hero, route, cards, footer and form sections.
+- Added tablet and mobile breakpoints at 980px, 860px, 760px, 700px and 430px.
+- Added a mobile navigation button that expands/collapses the primary menu.
+- Added relative units (rem, em, %, vw) and clamp() for responsive typography and spacing.
+- Added responsive image handling using picture, srcset and sizes on the home page.
+- Added hover and keyboard focus states and retained the prefers-reduced-motion accessibility setting.
+- Kept the visual design deliberately simple so the CSS remains understandable for a student project.
+
+### Responsive Design & Testing Evidence
+The site was tested in browser developer tools at desktop, tablet, and mobile widths. Below is the screenshot evidence showing the homepage layouts and mobile navigation behaviour:
+
+#### Desktop Viewport (>980px)
+![Desktop View Preview](images/desktop-preview.png)
+
+#### Tablet Viewport (760px - 980px)
+![Tablet View Preview](images/tablet-preview.png)
+
+#### Mobile Viewport (<430px)
+![Mobile View Preview](images/mobile-preview.png)
+
+## Key Features and Functionality
+- 5 pages: index.html, about.html, programmes.html, enquiry.html, contact.html.
+- Responsive, mobile-first layout (see css/styles.css).
+- Client-side validated enquiry form and contact form (see js/main.js) — required fields, inline error messages, focus management on error.
+- Scroll-reveal animation via IntersectionObserver, with prefers-reduced-motion respected.
+- Two real locations shown on the Contact page (Cape Town national office and a Gauteng regional depot), each with an embedded map.
+- Semantic HTML5 throughout (header, nav, main, section, article, address, footer), with a skip-link and visible focus states for keyboard users.
+- Original SVG mark used as the site favicon/brand icon — no stock photography used, to avoid any licensing uncertainty in this prototype.
+
+## Part 1 Lecturer Feedback & Changelog
+
+### Lecturer Feedback Addressed
+- **Git Commit Frequency:** Established a disciplined workflow for regular, incremental commits to track progress cleanly on GitHub.
+- **Code Commenting:** Added inline comments across HTML, CSS, and JavaScript files explaining structural choices, media queries, and script functions.
+- **Part 2 Implementation:** Completed CSS layout, media queries, and script behavior to deliver a fully functional, responsive website.
+- **Table of Contents:** Integrated an automatic Markdown Table of Contents at the top of the README for clear navigation.
+
+### Version History
+- v0.1 — Initial commit: folder structure, empty HTML shells.
+- v0.2 — Design system in styles.css (colour tokens, type scale, the "route" waypoint component).
+- v0.3 — Homepage (index.html) built and content integrated.
+- v0.4 — About, Programmes, Enquiry, and Contact pages built.
+- v0.5 — main.js added: scroll reveal, form validation, error states, reduced-motion handling.
+- v0.6 — Favicon added, cross-page nav/link audit, HTML structure linted, README written.
+- v1.0 (Part 2 Update) — Addressed all Part 1 feedback, added Table of Contents, detailed inline comments across codebase, integrated mobile menu toggle, relative units (clamp()), and media query breakpoints (980px, 860px, 760px, 700px, 430px).
 
 ## References
-- FoodForward SA. (2026). *About Us*. https://www.foodforwardsa.org/about-us/
-- FoodForward SA. (2026). *Home*. https://www.foodforwardsa.org/
-- FoodForward SA. (2026). *Contact Us*. https://www.foodforwardsa.org/contact-us/
-- FoodForward SA. (2026). *Support Food Security and Maximise Your Tax Benefits Before 28 Feb 2026*. https://www.foodforwardsa.org/
-- Daily Maverick. (2026). *Tackling food security through partnership and collective action*. https://www.dailymaverick.co.za/article/2026-07-21-tackling-food-security-through-partnership-and-collective-action/
-- Daily Maverick. (2026). *FoodForward SA calls for decisive action to address sharp rise in food insecurity*. https://www.dailymaverick.co.za/article/2026-04-12-foodforward-sa-calls-for-decisive-action-to-address-sharp-rise-in-food-insecurity/
-- Daily Maverick. (2023). *Using food surpluses to address SA's hunger and malnutrition crisis*. https://www.dailymaverick.co.za/article/2023-10-24-using-food-surpluses-to-address-sas-hunger-malnutrition-crisis/
-- ContactOut. (2026). *FoodForward SA — Company Profile*. https://contactout.com/company/FoodForward-SA-55501
-- Google Fonts. (2026). *Fraunces, Work Sans, IBM Plex Mono*. https://fonts.google.com/
+- FoodForward SA. (2026). About Us. https://www.foodforwardsa.org/about-us/
+- FoodForward SA. (2026). Home. https://www.foodforwardsa.org/
+- FoodForward SA. (2026). Contact Us. https://www.foodforwardsa.org/contact-us/
+- FoodForward SA. (2026). Support Food Security and Maximise Your Tax Benefits Before 28 Feb 2026. https://www.foodforwardsa.org/
+- Daily Maverick. (2026). Tackling food security through partnership and collective action. https://www.dailymaverick.co.za/article/2026-07-21-tackling-food-security-through-partnership-and-collective-action/
+- Daily Maverick. (2026). FoodForward SA calls for decisive action to address sharp rise in food insecurity. https://www.dailymaverick.co.za/article/2026-04-12-foodforward-sa-calls-for-decisive-action-to-address-sharp-rise-in-food-insecurity/
+- Daily Maverick. (2023). Using food surpluses to address SA's hunger and malnutrition crisis. https://www.dailymaverick.co.za/article/2023-10-24-using-food-surpluses-to-address-sas-hunger-malnutrition-crisis/
+- ContactOut. (2026). FoodForward SA — Company Profile. https://contactout.com/company/FoodForward-SA-55501
+- Google Fonts. (2026). Fraunces, Work Sans, IBM Plex Mono. https://fonts.google.com/
