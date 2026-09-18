@@ -1,4 +1,4 @@
-# FoodForward SA — Website Project (Part 1)
+# FoodForward SA — Website Project (Part 2)
 
 ## Project Title
 FoodForward SA Website Redesign Concept
@@ -28,6 +28,23 @@ are original student work.
 - Provide a simple, validated enquiry path that routes different visitor
   types (donors, volunteers, partners) through one form.
 - Give visitors a clear route to a physical location via the Contact page.
+
+## Part 2 — CSS Styling and Responsive Design
+
+The Part 2 changes build on the Part 1 site without changing the basic site structure. The main styling is still kept in one external stylesheet (`css/styles.css`).
+
+### CSS and responsive changes
+- Added a consistent CSS reset/base layer, typography scale, spacing, colours, borders, buttons, cards and form styling.
+- Added CSS Grid/Flexbox layouts for the hero, route, cards, footer and form sections.
+- Added tablet and mobile breakpoints at 980px, 860px, 760px, 700px and 430px.
+- Added a mobile navigation button that expands/collapses the primary menu.
+- Added relative units (`rem`, `em`, `%`, `vw`) and `clamp()` for responsive typography and spacing.
+- Added responsive image handling using `<picture>`, `srcset` and `sizes` on the home page.
+- Added hover and keyboard focus states and retained the `prefers-reduced-motion` accessibility setting.
+- Kept the visual design deliberately simple so the CSS remains understandable for a student project.
+
+### Testing note
+The site should be tested in browser developer tools at desktop, tablet and mobile widths before submission. Screenshot evidence can be added to this README after local testing; screenshots should show the homepage at each required breakpoint and demonstrate the mobile navigation.
 
 ## Key Features and Functionality
 - 5 pages: `index.html`, `about.html`, `programmes.html`, `enquiry.html`,
