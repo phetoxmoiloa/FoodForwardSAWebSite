@@ -575,3 +575,137 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ---------- Part 2: responsive navigation and layout ---------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.nav-toggle {
+  display: none;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  border-radius: 4px;
+  padding: 9px;
+  cursor: pointer;
+}
+
+.nav-toggle span:not(.sr-only) {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin: 4px 0;
+  background: var(--green-dark);
+}
+
+/* Tablet: reduce spacing before moving to the compact menu. */
+@media (max-width: 980px) {
+  .nav { padding-left: 20px; padding-right: 20px; }
+  .nav-links { gap: 16px; }
+  .nav-links a { font-size: 0.9rem; }
+  .wrap { padding-left: 20px; padding-right: 20px; }
+  .hero-grid { gap: 32px; }
+  .route-line { gap: 14px; }
+}
+
+/* Mobile: the navigation becomes a simple expandable menu and all
+   multi-column content changes to one column. */
+@media (max-width: 700px) {
+  .nav {
+    position: relative;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 0 4px;
+    border-top: 1px solid var(--line);
+  }
+
+  .nav-links.is-open { display: flex; }
+
+  .nav-links li { width: 100%; }
+
+  .nav-links a {
+    display: block;
+    padding: 10px 4px;
+    border-bottom: 1px solid rgba(207, 203, 174, 0.65);
+  }
+
+  .nav-cta { display: none; }
+
+  .hero { padding-top: 44px; }
+  .hero-grid,
+  .grid-2,
+  .grid-3,
+  .footer-grid { grid-template-columns: 1fr; }
+
+  .section { padding: 52px 0; }
+  .route { padding-bottom: 52px; }
+  .stat-strip { margin: 34px 0; gap: 18px; }
+  .card, .form-card, .hero-figure { padding: 22px; }
+  .page-hero { padding-top: 40px; }
+  .map-frame { height: 220px; }
+}
+
+/* Very small phones: keep buttons and statistics readable without
+   horizontal scrolling. */
+@media (max-width: 430px) {
+  body { font-size: 15px; }
+  .wrap { padding-left: 16px; padding-right: 16px; }
+  .nav { padding-left: 16px; padding-right: 16px; }
+  h1 { font-size: clamp(2rem, 11vw, 2.7rem); }
+  .hero-actions .btn { width: 100%; text-align: center; }
+  .stat-strip { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; }
+}
+
+/* ---------- Part 2: responsive image component ---------- */
+.route-image {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  margin: 0 auto 28px;
+}
+
+/* ---------- Part 2: clearer hover/focus states ---------- */
+.card,
+.btn,
+.nav-links a,
+.field input,
+.field select,
+.field textarea {
+  transition: border-color 0.2s ease, background-color 0.2s ease,
+              box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 5px 16px rgba(27, 27, 22, 0.07);
+}
+
+.btn:hover { transform: translateY(-1px); }
+
+@media (prefers-reduced-motion: reduce) {
+  .card, .btn, .nav-links a, .field input, .field select, .field textarea {
+    transition: none;
+  }
+}
