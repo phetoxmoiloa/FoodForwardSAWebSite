@@ -104,3 +104,25 @@ document.addEventListener('DOMContentLoaded', () => {
   initForm('enquiryForm', 'formSuccess');
   initForm('contactForm', 'contactSuccess');
 });
+
+// Mobile navigation toggle for Part 2 responsive design.
+function initMobileNav() {
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.getElementById('primary-menu');
+  if (!toggle || !menu) return;
+
+  toggle.addEventListener('click', () => {
+    const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!isOpen));
+    menu.classList.toggle('is-open', !isOpen);
+  });
+
+  menu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      toggle.setAttribute('aria-expanded', 'false');
+      menu.classList.remove('is-open');
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initMobileNav);
